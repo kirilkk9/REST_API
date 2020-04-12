@@ -44,11 +44,14 @@ namespace Elevators_API.Controllers
             {
                 myIntervention.start_intervention = System.DateTime.Now;
                 myIntervention.status = "InProgress";
+
             }
             else if(payload.status.Equals("Completed", System.StringComparison.InvariantCultureIgnoreCase))
+
             {
                 myIntervention.end_intervention = System.DateTime.Now;
                 myIntervention.status = "Completed";
+                
             }
             else
             {
